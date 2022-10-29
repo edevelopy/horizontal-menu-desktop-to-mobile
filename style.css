@@ -4,6 +4,10 @@ body {
   padding: 0;
 }
 
+.collapsed {
+  display: none;
+}
+
 nav {
   background-color: #0b0b0b;
   color: #fff;
@@ -12,6 +16,21 @@ nav {
 
 nav .mobile {
   display: none;
+}
+
+nav .mobile .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+}
+
+nav .mobile .header .more button {
+  background-color: #0b0b0b;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
 }
 
 nav .logo {
@@ -67,6 +86,16 @@ nav .desktop .secondary.mini {
     right: 0;
   }
   nav .secondary.mini:hover .submenu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav .desktop {
+    display: none;
+  }
+
+  nav .mobile {
     display: block;
   }
 }
